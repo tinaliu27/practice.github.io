@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif,
+}
+a {
+    text-decoration: none;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+/* Hero Section */ 
+#top{
+    background-image: url(./img/gd78f8a7fed874e453cbccdf5b87f29aedcdc48b9cf6004918bb3290b04250118615a821065a62bd20da0b43baad42dc2_640.jpeg);
+    background-size: cover; /* this is what makes ot one photo |*/
+    background-position: top center; 
+    position: relative;
+    z-index: -1;
+}
+#top::after { /* last child of element */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7; 
+    z-index: -1; 
+}
+#top h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem; 
+    position: relative;
+    color: white; 
+}
+#top .cta{
+    display: inline-block;
+    padding: 10 px 30 px; 
+    color: crimson;
+    background-color: white;
+}
