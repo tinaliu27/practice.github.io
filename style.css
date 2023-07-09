@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -6,26 +6,27 @@
 }
 html {
     font-size: 10px;
-    font-family: 'Roboto', sans-serif,
+    font-family: Times, sans-serif,
 }
 a {
     text-decoration: none;
 }
 .container {
-    min-height: 50vh;
+    min-height: 500px;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: left; 
 }
-/* Hero Section */ 
-#top{
+/* Top Section */ 
+#top {
     background-image: url(./img/gd78f8a7fed874e453cbccdf5b87f29aedcdc48b9cf6004918bb3290b04250118615a821065a62bd20da0b43baad42dc2_640.jpeg);
     background-size: cover; /* this is what makes ot one photo |*/
     background-position: top center; 
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
+/* overlay */
 #top::after { /* last child of element */
     content: '';
     position: absolute;
@@ -37,17 +38,143 @@ a {
     opacity: .7; 
     z-index: -1; 
 }
+#top .top {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 50px;
+    justify-content: flex-start;
+}
 #top h1{
     display: block;
     width: fit-content;
     font-size: 4rem; 
     position: relative;
-    color: white; 
+    color: transparent; 
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+#top h1:nth-child(1) {
+    animation-delay: 1.5s;
+}
+#top h1:nth-child(2) {
+    animation-delay: 2.5s;
+}
+#top h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3.5s;
+}
+/* for each different text */ 
+#top h1 span{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: blueviolet;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s; 
+}
+#top h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+#top h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+#top h1:nth-child(3) span{
+    animation-delay: 3s;
 }
 #top .cta{
     display: inline-block;
-    padding: 10 px 30 px; 
+    padding: 10px 30px; 
     color: crimson;
     background-color: transparent;
-    border: 2 px solid crimson; 
+    border: 1px solid crimson; 
+    text-transform: uppercase; 
+    letter-spacing: .1rem;  
+    margin-top: 20 px; 
+    transition: .3s ease;
+    transition-property: background-color, color; 
+    text-align: center;
 }   
+#top .cta:hover {
+    color: white; 
+    background-color: crimson; 
+}
+
+/* SERVICES SECTION */
+#services { 
+    background-color: lightgray;
+    height: 400px;
+    width: 100%;
+    display: flex; 
+}
+#services .services{
+    flex-direction: column; 
+    text-align: center; 
+    max-width: 1500; 
+    margin: 0 auto; 
+    padding: 100px 0; 
+}
+#services .section-title{
+    font-size: 4rem; 
+    font-weight: 300; 
+    color: white; 
+    margin-bottom: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: .2rem; 
+    text-align: center; 
+}
+#services .section-title span{
+    color: crimson; 
+}
+#services .service-top p{
+    font-size: 1.4rem; 
+    margin-top: 5px; 
+    line-height: 2.5rem; 
+    font-weight: 300px; 
+    letter-spacing: .05rem; 
+}
+#services .service-bottom{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+#services .service-item { 
+    flex-basis: 80%;
+    display: flex; 
+    align-items: flex-start;
+    justify-content: center; 
+    flex-direction: column; 
+    padding: 30px; 
+    border-radius: 10px; 
+    background-image: url(./img/watercolor.jpeg);
+    background-size: cover;  
+    margin: 10px 5%; 
+}
+#services h1{
+    text-align: center;
+}
+
+/* Keyframes  */ 
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0; 
+        left: 100%; 
+    }
+}
+@keyframes text_reveal{
+    100% {
+        color: white; 
+    }
+}
+@keyframes text_reveal_name {
+    100% {
+        color: red; 
+    }
+}
+
