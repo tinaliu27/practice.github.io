@@ -12,7 +12,7 @@ a {
     text-decoration: none;
 }
 .container {
-    min-height: 500px;
+    min-height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -22,7 +22,8 @@ a {
 #top {
     background-image: url(./img/gd78f8a7fed874e453cbccdf5b87f29aedcdc48b9cf6004918bb3290b04250118615a821065a62bd20da0b43baad42dc2_640.jpeg);
     background-size: cover; /* this is what makes ot one photo |*/
-    background-position: top center; 
+    background-position:  center; 
+    height:400px;
     position: relative;
     z-index: 1;
 }
@@ -46,6 +47,8 @@ a {
 }
 #top h1{
     display: block;
+    margin: 0 auto;
+    text-align:center;
     width: fit-content;
     font-size: 4rem; 
     position: relative;
@@ -85,16 +88,16 @@ a {
 }
 #top .cta{
     display: inline-block;
+    position: center; 
+    text-align: right;
     padding: 10px 30px; 
     color: crimson;
     background-color: transparent;
     border: 1px solid crimson; 
     text-transform: uppercase; 
-    letter-spacing: .1rem;  
-    margin-top: 20 px; 
+    letter-spacing: .4rem;  
     transition: .3s ease;
     transition-property: background-color, color; 
-    text-align: center;
 }   
 #top .cta:hover {
     color: white; 
@@ -103,13 +106,13 @@ a {
 
 /* SERVICES SECTION */
 #services { 
-    background-color: lightgray;
-    height: 400px;
+    background-image: linear-gradient(gray,white);
+    height: 600px;
     width: 100%;
     display: flex; 
 }
 #services .services{
-    flex-direction: column; 
+    flex-direction: column; /* makes all the items in services align from top to left and must redefine based on container */
     text-align: center; 
     max-width: 1500; 
     margin: 0 auto; 
@@ -124,8 +127,14 @@ a {
     letter-spacing: .2rem; 
     text-align: center; 
 }
+#services .service-top p{
+    font-size: 3rem;
+    margin-top: 5px;
+    letter-spacing: 20rem;
+}
 #services .section-title span{
-    color: crimson; 
+    animation: reveal_i 3s ease forwards;
+
 }
 #services .service-top p{
     font-size: 1.4rem; 
@@ -175,6 +184,17 @@ a {
 @keyframes text_reveal_name {
     100% {
         color: red; 
+    }
+}
+@keyframes reveal_i{
+    20%{
+        height: 100%;
+        bottom: 0;
+    }
+    100% {
+        height: 0; 
+        bottom: 100%; 
+        color: crimson;
     }
 }
 
