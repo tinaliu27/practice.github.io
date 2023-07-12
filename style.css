@@ -6,7 +6,8 @@
 }
 html {
     font-size: 10px;
-    font-family: Times, sans-serif,
+    font-family: Times, sans-serif;
+    
 }
 a {
     text-decoration: none;
@@ -16,6 +17,20 @@ a {
     width: 100%;
     display: flex;
     align-items: center;
+}
+img {
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+}
+p {
+    margin-top: 5px; 
+    color: rgb(173, 167, 167); 
+    text-align: right; 
+    font-size: 1.5rem; 
+    line-height: 2.5rem;
+    letter-spacing: .05rem; 
+    font-weight: 300; 
 }
 #header {
     background-color: black; 
@@ -123,15 +138,15 @@ a {
 
 /* SERVICES SECTION */
 #services { 
-    background-image: linear-gradient(gray,white);
-    height: 600px;
+    background-image: url(./img/watercolor.jpeg);
+    background-size: cover;
+    height: 100%;
     width: 100%;
-    display: flex; 
 }
 #services .services{
     flex-direction: column; /* makes all the items in services align from top to left and must redefine based on container */
     text-align: center; 
-    max-width: 1500; 
+    max-width: 1500px; 
     margin: 0 auto; 
     padding: 100px 0; 
 }
@@ -143,19 +158,22 @@ a {
     text-transform: uppercase; 
     letter-spacing: .2rem; 
     text-align: center; 
-}
-#services .service-top p{
-    font-size: 3rem;
-    margin-top: 5px;
-    letter-spacing: 20rem;
+    margin-top: -50px;
+    
 }
 #services .section-title span{
     animation: reveal_i 3s ease forwards;
 
 }
 #services .service-top p{
+    color: black; 
+    justify-content: center; 
+    text-align: center; 
+    display: inline-block;
     font-size: 1.4rem; 
     margin-top: 5px; 
+    margin-left: 20px; 
+    margin-right: 20px; 
     line-height: 2.5rem; 
     font-weight: 300px; 
     letter-spacing: .05rem; 
@@ -164,28 +182,153 @@ a {
     display: flex; 
     align-items: center; 
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin-top: 25px; 
 }
-#services .service-item { 
+#services .services-item { 
     flex-basis: 80%;
     display: flex; 
-    align-items: flex-start;
-    justify-content: center; 
+    align-items: flex-start; 
+    justify-content: center;
     flex-direction: column; 
     padding: 30px; 
     border-radius: 10px; 
-    background-image: url(./img/watercolor.jpeg);
-    background-size: cover;  
     margin: 10px 5%; 
+    background-image: url(./img/1295890.png);
+    background-size: cover; 
+    margin: 10px 5%; 
+    position: relative; /* very important actually blurs out the specific part of the block   */ 
+    z-index: 1; 
+    overflow: hidden; 
+} 
+#services .services-item::after{
+    content: '';
+    position: absolute; 
+    left: 0;
+    top:0; 
+    height: 100%; 
+    width: 100%; 
+    background-color: black; 
+    opacity: .4; 
+    z-index: -1;
 }
-#services h1{
-    text-align: center;
+#services .service-bottom h2{
+   font-size: 2rem;
+    color: white; 
+    margin-bottom: 10px; 
+    text-transform: uppercase; 
 }
-#urmom {
-    height: 100px; 
-    background-color: blue;
-    display: block; 
+
+#services .service-bottom .icon{
+    height: 80px;
+    width: 100%; 
+    margin-bottom: 20px; 
 }
+#services .servics-item p{
+    color: white; 
+}
+/*Projects*/
+#project{ 
+    display: flex; 
+    height: 100%; 
+    width:100%
+} 
+#project .projects{
+    flex-direction: column; 
+    max-width: 1500px; 
+    margin: 0 auto; 
+    padding: 100px 0; 
+}
+#project .project-top{
+    font-size: 3rem;
+    color: black; 
+    text-transform: uppercase; 
+    align-items: center;
+    line-height: 2.5rem; 
+    letter-spacing: 1rem;
+    font-weight: 400;
+    font-family: Impact; 
+}
+#project .project-bottom{
+    display: flex; 
+    text-align: center; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-top: 25px; 
+}
+#project .project-top span{
+    color: red;
+}
+#project .project-items {
+    display: flex; 
+    align-items: center; /* changes where the title is like on the left or center */
+    justify-content: center; 
+    flex-direction: column; 
+    width: 60%; 
+    border-radius: 10px;
+    background-color: rgb(5, 5, 52);
+    background-size: cover; 
+    position: relative; 
+    overflow: hidden; 
+    margin: 20px auto; 
+    z-index: 1;
+    overflow: hidden; 
+}
+#project .project-items::after{
+    content: '';
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    height: 100%; 
+    width: 100%; 
+    background-color:black; 
+    opacity: .4;
+    z-index: -1;
+}
+#project .project-items h2{
+    color: white; 
+    font-size: 3.2rem; 
+    text-transform: uppercase;
+}
+#project .project-items h4{
+    color: white; 
+    font-size: 1.5rem; 
+}
+#project .project-items p{
+    color: white; 
+    text-align: left; 
+    margin-bottom: 10px;
+}
+#project .projectinfo{ 
+    padding: 15px; 
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#project .photo{
+    flex-basis: 50%; 
+    height: 300px; 
+    overflow: hidden; 
+}
+#project .photo:after{
+    content: '';
+    position: absolute; 
+    left: 0; 
+    top: 50; 
+    height: 100%; 
+    width: 100%; 
+    background-color: black;
+    opacity: .3; 
+}
+#project .photo img{
+    transition: .3s ease transform; 
+}
+#project .project-items:hover .photo img{
+    transform: scale(1.2);
+}
+
 
 /* Keyframes  */ 
 @keyframes text_reveal_box {
