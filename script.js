@@ -1,12 +1,16 @@
-const scrollProgressElement = document.querySelector("#scroll-progress");
-function scrollProgress() {
-    const totalheightofWebpage = document.body.scrollHeight; 
-    const currentDistanceFromTop = document.documentElement.scrollTop; 
+const circle = document.querySelector('.header .nav-bar .nav-list .circle');
+const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+const header = document.querySelector('.header.container');
+circle.addEventListener('click', () => {
+    circle.classList.toggle('active');
+    mobile_menu.classList.toggle('active');
 
-    const windowheight = document.documentElement.clientHeight; 
-    const scrolledPercentage = (currentDistanceFromTop / (totalheightofWebpage - windowheight)) * 100; 
-
-    scrollProgressElement.style.width = Math.round(scrolledPercentage) + "%";
-    
-}
-document.adddEventListener("scroll", scrollProgress); 
+})
+document.addEventListerner('scroll', ()=> {
+    var croll_position= window.scrollY;
+    if(scroll_position > 250){
+        header.style.backgroundColor = "#29323c";
+    } else{
+        header.style.backgroundColor = "transparent";
+    }
+})

@@ -10,7 +10,21 @@
     <!-- Header Section -->
     <section id = "header">
         <div class = "header container">
-            <h1>Tina Liu</h1>
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#top"><h1><span>T</span>ina <span>L</span>iu</h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="circle"><div class="bar"></div></div>
+                    <ul>
+                        <li><a href="#header" data-after="Home">Home</a></li>
+                        <li><a href="#services" data-after="Services">Services</a></li>
+                        <li><a href="#project" data-after="Projects">Projects</a></li>
+                        <li><a href="#about-me" data-after="About">About</a></li>
+                        <li><a href="#contact-info" data-after="Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Scroller Section -->
@@ -76,17 +90,26 @@
                 </div>
                
                 <div class="project-items">
+                    <div class="projectinfo">
                         <h2>Project <span>2</span></h2>
                         <h4>Coding is gross.</h4>
                         <p>Develop an expense tracker mobile application that helps users track their daily expenses and manage their budgets effectively. The app can have features like expense categorization, budget setting, transaction logging, and data visualization. Users can input their expenses, categorize them, set spending limits, and view reports and graphs to gain insights into their spending habits. The project can be implemented using a mobile development framework like React Native or Flutter, along with a backend server for data storage and synchronization. The app aims to promote financial awareness and assist users in making informed financial decisions.</p>
+                    </div>
+                    <div class="photo">
                         <img src = "./img/55e8d7444e57a814f1dc8460962e33791c3ad6e04e5074417c2e7dd29744c7_640.jpeg">
+                    </div>
                 </div>
                 <div class="project-items">
+                    <div class="projectinfo">
                         <h2>Project <span>3</span></h2>
                         <h4>Coding is everything.</h4>
-                        <p>Build a virtual library management system that simplifies the process of managing and accessing books in a library. The system can have features such as book cataloging, user management, borrowing and returning books, and search functionality. Users can browse the library catalog, check the availability of books, reserve or request books, and receive notifications for due dates. The project can involve designing a database schema, implementing CRUD operations for books and users, and developing a user-friendly web or desktop application. The virtual library system aims to streamline library operations and enhance user experience in accessing and managing books.</p>
+                        <p>Build a ng books in a library. The system can have features such as book cataloging, user management, borrowing and returning books, and search functionality. Users can browse the library catalog, check the availability of books, reserve or request books, and receive notifications for due dates. The project can involve designing a database schema, implementing CRUD operations for books and users, and developing a user-friendly web or desktop application. The virtual library system aims to streamline library operations and enhance user experience in accessing and managing books.</p>
+                    </div>
+                    <div class="photo">
                         <img src = "./img/57e6d0424950a914f1dc8460962e33791c3ad6e04e50744172287ad2964cc0_640.jpeg">
+                    </div>
                 </div>
+             </div>
              </div>
         </div>
     </section>
@@ -94,19 +117,94 @@
    <section id="about-me">
         <div class="about-me container">
             <div class="about-me-info">
-                <h1>About Me</h1>
+                <h1>About <span>Me</span></h1>
                 <h3>Software Engineer Intern</h3>
                 <p>I'd just like to thank you for this channel 
                     and your content. It calms me and makes me look forward to good things in life (i am a bit of a foodie so food makes me happy by default). I wish your channel all the best and hope it grows a lot because your work and positive attitude deserves recognition. I will be here cheering you on :)</p>
                 <a href="#" type="button" class="hi" onlick="myFunction()">Download Resume </a>
             </div>
             <div class="about-me-photo">
-                <img src="./img/watercolor-light-steel-blue-wallpaper-image_53876-94665.avif">
+                <div class="photoofme">
+                    <img src="./img/watercolor-light-steel-blue-wallpaper-image_53876-94665.avif">
+                </div>
+            </div>
+            <div class="social-media">
+                    <div class="instagram">
+                        <img src="./img/Instagram_logo_2016.svg.webp">
+                    </div>
+                    <div class="instagram">
+                        <img src="./img/Instagram_logo_2016.svg.webp">
+                    </div>
+                    <div class="instagram">
+                        <img src="./img/Instagram_logo_2016.svg.webp">
+                    </div>
+                    <div class="instagram">
+                        <img src="./img/Instagram_logo_2016.svg.webp">
+                    </div>
             </div>
         </div>
    </section>
+   <!-- Contact Me  -->
 
-
+   <services id="contact-info">
+    <div class="contact-info container">
+        <div class="contact-info-top">
+            <h1>Contact <span>Info</span></h1>
+        </div>
+        <!--Could ALso do <div><h1 class = "title">Contact<span>Info </span></h1></div>-->
+        <div class="contact-info-bottom">
+            <div class="contact-info-blocks">
+                <div class="phone-number">
+                    <img src="./img/molumen_phone_icon.png">
+                    <h2>Phone</h2>
+                    <p>6505807224</p>
+                    <p>6505807293</p>
+                </div>
+            </div>
+            <div class="contact-info-blocks">
+                <div class="email">
+                    <img src="./img/molumen_phone_icon.png">
+                    <h2>Email</h2>
+                    <p>Business: 27tinaliu@gmail.com</p>
+                    <p>Personal: tinatimliu@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-info-blocks">
+                <div class="address">
+                    <img src="./img/molumen_phone_icon.png">
+                    <h2>Address</h2>
+                    <p>Millburn, NJ 07041</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</services>
+<!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand"><h1 class = "title"><span>T</span>ina <span>L</span>iu</h1></div>
+            <h2>Complete Website Design</h2>
+            <div class="social-media-icons">
+                <div class="social-items">
+                    <a hred="#"><img src="./img/apps.52135.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.a0fa539c-1edb-4631-8ad1-1b37c3fed095">
+                    </a>
+                </div>
+                <div class="social-items">
+                    <a hred="#"><img src="./img/apps.52135.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.a0fa539c-1edb-4631-8ad1-1b37c3fed095">
+                    </a>
+                </div>
+                <div class="social-items">
+                    <a hred="#"><img src="./img/apps.52135.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.a0fa539c-1edb-4631-8ad1-1b37c3fed095">
+                    </a>
+                </div>
+                <div class="social-items">
+                    <a hred="#"><img src="./img/apps.52135.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.a0fa539c-1edb-4631-8ad1-1b37c3fed095">
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
 </body>
 <script src= "script.js"></script>
 
